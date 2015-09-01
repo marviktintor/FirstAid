@@ -4,6 +4,7 @@ import android.content.Context;
 import android.database.Cursor;
 import android.database.sqlite.SQLiteDatabase;
 
+import com.marvik.apps.firstaid.customlist.AttacksCustomList;
 import com.marvik.apps.firstaid.database.schemas.DatabaseSchema;
 import com.marvik.apps.firstaid.database.tables.Tables;
 import com.marvik.apps.firstaid.infos.AttacksInfo;
@@ -11,6 +12,7 @@ import com.marvik.apps.firstaid.infos.FirstAidInfo;
 import com.marvik.apps.firstaid.infos.NotesInfo;
 import com.marvik.apps.firstaid.infos.SymptomsInfo;
 
+import java.util.ArrayList;
 import java.util.List;
 
 /**
@@ -163,5 +165,33 @@ public class TransactionsManager {
 
     public DatabaseSchema getDatabaseSchema() {
         return databaseSchema;
+    }
+
+    public List<AttacksCustomList> getAttacksCustomList(String search) {
+        String selection = null;
+        if(search != null && !search.equals("")){
+            selection = Tables.Attacks.COL_ATTACK+" LIKE '%" +search +"%'";
+        }
+        List<AttacksCustomList> attacksCustomLists = new ArrayList<AttacksCustomList>();
+        Cursor attacksCursor = getAttacksCursor(null, selection, null, null, null, null);
+        if (attacksCursor != null) {
+
+            for (attacksCursor.moveToNext(); !attacksCursor.isAfterLast(); attacksCursor.moveToNext()) {
+                int attackId = attacksCursor.getInt(attacksCursor.getColumnIndex(Tables.Attacks.COL_ATTACK_ID));
+                String attack = attacksCursor.getString(attacksCursor.getColumnIndex(Tables.Attacks.COL_ATTACK));
+
+                String _selection = Tables.Symptoms.COL_ATTACK_ID +"='" +attackId +"'";
+                Cursor symptomsCursor = getSymptomsCursor(null, _selection, null, null, null, null);
+                if (symptomsCursor != null) {
+
+                    symptomsCursor.moveToFirst();
+                    String symptom = symptomsCursor.getString(symptomsCursor.getColumnIndex(Tables.Symptoms.COL_SYMPTOM));
+                    attacksCustomLists.add(new AttacksCustomList(attackId, attack, symptom));
+                }
+            }
+
+
+        }
+        return attacksCustomLists;
     }
 }
