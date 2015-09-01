@@ -3,34 +3,34 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:orientation="vertical"
-    android:padding="10dp">
+    android:orientation="vertical">
 
     <TextView
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
+        android:background="@android:color/holo_orange_dark"
         android:padding="16dp"
         android:text="@string/app_name"
-        android:textColor="@android:color/holo_blue_bright"
-       />
+        android:textColor="@android:color/white" />
 
-    <View
+    <LinearLayout
         android:layout_width="match_parent"
-        android:layout_height="1dp"
-        android:background="@android:color/darker_gray" />
+        android:layout_height="match_parent"
+        android:orientation="vertical"
+        android:padding="10dp">
 
-    <EditText
-        android:id="@+id/activity_firstaid_editText_search"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:drawableLeft="@android:drawable/ic_menu_search"
-        android:hint="@string/search" />
+        <EditText
+            android:id="@+id/activity_firstaid_editText_search"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:hint="@string/search" />
 
-    <ListView
-        android:id="@+id/activity_firstaid_listView_attacks"
-        android:layout_width="match_parent"
-        android:layout_height="fill_parent"
-        android:layout_marginBottom="10dp"
-        android:layout_marginTop="10dp"
-        tools:listitem="@layout/list_attacks"></ListView>
+        <ListView
+            android:id="@+id/activity_firstaid_listView_attacks"
+            android:layout_width="match_parent"
+            android:layout_height="fill_parent"
+            android:layout_marginBottom="10dp"
+            android:layout_marginTop="10dp"
+            tools:listitem="@layout/list_attacks"></ListView>
+    </LinearLayout>
 </LinearLayout>

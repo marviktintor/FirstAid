@@ -43,6 +43,7 @@ public class Utils {
 
             values = new ContentValues();
             values.put(Tables.Attacks.COL_ATTACK, attacks[i]);
+            values.put(Tables.Attacks.COL_DEGREE, -1);
             if (i > 0 && i < 4) {
                 degree++;
                 values.put(Tables.Attacks.COL_DEGREE, degree);
