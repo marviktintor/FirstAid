@@ -35,40 +35,32 @@ public class Utils {
     }
 
     public void initAttacksFirstAids() {
-        String [] attacks = {"","Asthma Attack","Burns","Burns","Burns","Bone Fracture","Chemical Burns","Cuts and Wounds","Drowning",
-                "Electric Burns","Heart Attack/Arrest","Hypothermia","Hiccups","Snake Bites","Stings","Attention","Stroke","Pulse","CPR"};
-
+        String [] attacks = null;
         ContentValues values = null;
         int degree = 0;
-        for(int i = 1;i < attacks.length; i++){
+        for(int i = 0;i < attacks.length; i++){
 
             values = new ContentValues();
             values.put(Tables.Attacks.COL_ATTACK,attacks[i]);
-            if(i > 1 && i < 5) {
+            if(i > 0 && i < 4) {
                 degree++;
                 values.put(Tables.Attacks.COL_DEGREE, degree);
             }
             getTransactionsManager().getSqLiteDatabase().insert(Tables.Attacks.TABLE_NAME,null,values);
+            insertSymptom(i + 1);
+            insertFirstAid(i + 1);
+            insertNote(i + 1);
         }
-       Asthma-> Coughing,Wheezing (whistling sound when breathing),Shortness of breath,Chest tightness,Inability to talk (this varies with the magnitude of the attack)
-        Sit/make the victim sit upright,Ensure a comfortable position by raising the hands forward,Breathe in deeply by exhaling sharply,Do this in multiple rounds until normal breathing,After 30 minutes use your/their medicated inhaler
-        NOTE: If the victim cannot talk, call emergency medical unit first.
 
 
-
-
-
-
-
-
-
-        String [] symptoms = {};
-        String [] firstAids = {};
-        String [] notes = {};
 
         SharedPreferences prefs = PreferenceManager.getDefaultSharedPreferences(getContext());
         SharedPreferences.Editor editor=  prefs.edit();
         editor.putBoolean(Prefs.FIRSTRUN,false);
         editor.commit();
     }
+
+    private void insertSymptom (int attackId){}
+    private void insertFirstAid (int attackId){}
+    private void insertNote (int attackId){}
 }

@@ -4,10 +4,10 @@ package com.marvik.apps.firstaid.utils.data;
  * Created by victor on 9/1/2015.
  */
 public class Data {
-    String [] attacks = {"Asthma Attack","Burns","Burns","Burns","Bone Fracture","Chemical Burns",
-            "Cuts and Wounds","Drowning","Electric Burns","Heart Attack/Arrest","Hypothermia","Hiccups",
-            "Snake Bites","Stings","Attention","Stroke","Pulse","CPR - (Cardiopulmonary resuscitation)"};
-    String [] symptoms = {
+    static public String[] attacks = {"Asthma Attack", "Burns", "Burns", "Burns", "Bone Fracture", "Chemical Burns - ON SKIN", "Chemical Burns - SWALLOWED",
+            "Cuts and Wounds - MAJOR", "Cuts and Wounds - MINOR", "Drowning", "Electric Burns", "Heart Attack/Arrest", "Hypothermia", "Hiccups",
+            "Snake Bites", "Stings", "Attention", "Stroke", "Pulse", "CPR - (Cardiopulmonary resuscitation) - Adult", "CPR - (Cardiopulmonary resuscitation) - Child"};
+    static public String[] symptoms = {
             "Coughing,Wheezing (whistling sound when breathing),Shortness of breath,Chest tightness,Inability to talk (this varies with the magnitude of the attack)",//Asthma Attack
             "Pain,Reddening of the skin,Swelling",//Burns
             "Red-white skin,Blisters,Pain,Swelling",//Burns
@@ -32,16 +32,7 @@ public class Data {
     };
 
 
-
-
-
-
-
-
-
-
-
-    String [] firstAid = {
+    static public String[] firstAid = {
             "Sit/make the victim sit upright,Ensure a comfortable position by raising the hands forward,Breathe in deeply by exhaling sharply,Do this in multiple rounds until normal breathing,After 30 minutes use your/their medicated inhaler",//Asthma Attack
             "Hold the burn under cool water for 10 to 20 minutes,Remove tight clothing or ring around burnt area,Do not break blisters,Apply aloe vera gel or lotion to ease pain,Take some over the counter painkillers (paracetamol)",//Burns
             "Run skin under cool water for 15 minutes or longer,Take over the counter pain medication,Apply antibiotic cream/dust on blisters,Bandage lightly to reduce infections",//Burns
@@ -66,10 +57,7 @@ public class Data {
     };
 
 
-
-
-
-    String [] notes = {
+    static public String[] notes = {
             "NOTE: If the victim cannot talk, call emergency medical unit first.",//Asthma Attack
             "NOTE: Call emergency medical unit if the burn occurs on joints, face, feet and buttocks",//Burns
             "NOTE: Call emergency medical unit if the burn occurs on joints, face, feet and buttocks",//Burns
@@ -92,6 +80,4 @@ public class Data {
             "",//CPR - ADULT
             "",//CPR - CHILD
     };
-
-
 }
