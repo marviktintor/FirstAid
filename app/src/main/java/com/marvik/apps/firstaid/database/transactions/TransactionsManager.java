@@ -127,6 +127,9 @@ public class TransactionsManager {
     }
 
     public List<NotesInfo> getNotesInfoList(int attackId) {
+
+        notesInfoList = new ArrayList<NotesInfo>();
+
         String selection = null;
         if (attackId != -1) {
             selection = Tables.Notes.COL_ATTACK_ID + "='" + attackId + "'";
