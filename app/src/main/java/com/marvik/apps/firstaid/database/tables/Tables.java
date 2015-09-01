@@ -8,8 +8,10 @@ public class Tables {
         public static final String TABLE_NAME = "tbl_attacks";
         public static final String COL_ATTACK_ID = "attack_id";
         public static final String COL_ATTACK = "attack";
+        public static final String COL_DEGREE = "degree";
         public static final String SQL = "CREATE TABLE IF NOT EXISTS " +TABLE_NAME +"("
                 +COL_ATTACK_ID +" integer primary key autoincrement,"
+                +COL_DEGREE +" integer,"
                 +COL_ATTACK +" text not null);";
     }
 
