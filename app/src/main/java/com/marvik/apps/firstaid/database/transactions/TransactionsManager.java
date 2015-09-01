@@ -74,7 +74,11 @@ public class TransactionsManager {
                 int symptomId = cursor.getInt(cursor.getColumnIndex(Tables.Symptoms.COL_SYMPTOM_ID));
                 String symptom = cursor.getString(cursor.getColumnIndex(Tables.Symptoms.COL_SYMPTOM));
                 //int attackId = cursor.getInt(cursor.getColumnIndex(Tables.Symptoms.COL_ATTACK_ID));
-                symptomsInfoList.add(new SymptomsInfo(symptomId, symptom, attackId));
+                String [] symptoms = symptom.split(",");
+                for(String _symptom : symptoms){
+                    symptomsInfoList.add(new SymptomsInfo(symptomId, _symptom, attackId));
+                }
+
             }
         }
 
@@ -100,7 +104,12 @@ public class TransactionsManager {
                 int firstAidId = cursor.getInt(cursor.getColumnIndex(Tables.FirstAids.COL_FIRST_AID_ID));
                 String firstAid = cursor.getString(cursor.getColumnIndex(Tables.FirstAids.COL_FIRST_AID));
                 //int attackId = cursor.getInt(cursor.getColumnIndex(Tables.FirstAids.COL_ATTACK_ID));
-                firstAidInfoList.add(new FirstAidInfo(firstAidId, firstAid, attackId));
+                String [] firstAids = firstAid.split(",");
+                for(String _firstAid : firstAids){
+                    firstAidInfoList.add(new FirstAidInfo(firstAidId, _firstAid, attackId));
+                }
+
+
 
             }
         }
@@ -125,9 +134,13 @@ public class TransactionsManager {
             for (cursor.moveToFirst(); !cursor.isAfterLast(); cursor.moveToNext()) {
 
                 int notesId = cursor.getInt(cursor.getColumnIndex(Tables.Notes.COL_NOTE_ID));
-                String notes = cursor.getString(cursor.getColumnIndex(Tables.Notes.COL_NOTE));
+                String note = cursor.getString(cursor.getColumnIndex(Tables.Notes.COL_NOTE));
                 //int attackId = cursor.getInt(cursor.getColumnIndex(Tables.Notes.COL_ATTACK_ID));
-                notesInfoList.add(new NotesInfo(notesId, notes, attackId));
+                String [] notes = note.split(",");
+                for(String _notes : notes){
+                    notesInfoList.add(new NotesInfo(notesId, _notes, attackId));
+                }
+
 
             }
         }
