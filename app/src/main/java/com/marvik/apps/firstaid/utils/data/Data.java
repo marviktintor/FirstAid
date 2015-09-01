@@ -23,7 +23,7 @@ public class Data {
                 "Chest pains especially in the middle of the chest feels like pressure squeezing,Pains transmit to the arms shoulders jaws back and stomach,Cold sweating,Shortness of breath,Irregular heartbeat and extreme weakness,Nausea and vomiting",//Heart Attack/Arrest
                 "Pale and numbness (hands or feet),Cold and shivering,Increased heart rate,Shallow breathing",//Hypothermia
                 "Epiglottis makes a \"hic\" sound,Sharp expansion of the diaphragm",//Hiccups
-                "Two puncture wounds,Swelling redness and pain at the bite site,Blurred vision,Shortness of breath,Vomiting, nausea and salivating,Sweating and numbness (face and limbs),Dropping eyelids and thirst,Change of colour of skin.,Hunt down the snake it’s waste of time, DO NOT Cut the affected area,DO NOT Apply cold compresses or tourniquet,DO NOT Try to suck the venom by mouth, DO NOT Give the victim anything by mouth, DO NOT Give the victim any medication unless directed by  doctor",//Snake Bites
+                "Two puncture wounds,Swelling redness and pain at the bite site,Blurred vision,Shortness of breath,Vomiting  nausea and salivating,Sweating and numbness (face and limbs),Dropping eyelids and thirst,Change of colour of skin.,Hunt down the snake it’s waste of time,",//Snake Bites
                 "Itching, reddening, minor swelling",//Stings
                 "Breathing problems,Abdominal cramps,Swelling of lips face or throat,Nausea or vomiting,Hives,Shock",//Attention
                 "",//Stroke
