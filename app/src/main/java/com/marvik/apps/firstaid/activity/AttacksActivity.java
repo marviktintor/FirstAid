@@ -34,6 +34,7 @@ public class AttacksActivity extends ActivityWrapper implements AdapterView.OnIt
             getUtils().initAttacksFirstAids();
         }
         initViews();
+
     }
 
     @Override
