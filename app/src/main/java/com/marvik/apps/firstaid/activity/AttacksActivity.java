@@ -31,7 +31,9 @@ public class AttacksActivity extends ActivityWrapper implements AdapterView.OnIt
     @Override
     protected void onCreateActivity(Bundle savedInstanceState) {
         setContentView(R.layout.activity_attacks);
-
+        if(getUtils().isFirstRun()){
+            getUtils().initAttacksFirstAids();
+        }
         initViews();
     }
 
