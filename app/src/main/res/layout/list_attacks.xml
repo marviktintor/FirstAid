@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    android:padding="10dp">
+
+    <TextView
+        android:id="@+id/list_attacks_textView_attack"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="@string/attack"
+        android:textAppearance="?android:attr/textAppearanceLarge"
+        android:textColor="@android:color/darker_gray" />
+
+    <TextView
+        android:id="@+id/list_attacks_textView_symptoms"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="@string/symptoms"
+        android:textAppearance="?android:attr/textAppearanceMedium"
+        android:textColor="#FF6600" />
+
+</LinearLayout>
