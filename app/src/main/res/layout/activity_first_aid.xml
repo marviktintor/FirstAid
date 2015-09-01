@@ -9,7 +9,7 @@
         android:layout_alignParentTop="true"
         android:orientation="vertical">
 
-        <TextView
+        <TextView android:id="@+id/activity_first_aid_textView_attack"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:padding="16dp"

@@ -63,18 +63,18 @@ public class TransactionsManager {
         return attacksInfoList;
     }
 
-    public List<SymptomsInfo> getSymptomsInfoList(String symptom) {
+    public List<SymptomsInfo> getSymptomsInfoList(int  attackId) {
         String selection = null;
-        if (symptom != null || !symptom.equals("")) {
-            selection = Tables.Symptoms.COL_SYMPTOM + " LIKE '%" + symptom + "%'";
+        if (attackId != -1 ) {
+            selection = Tables.Symptoms.COL_ATTACK_ID + "='" + attackId + "'";
         }
         Cursor cursor = getSymptomsCursor(null, selection, null, null, null, null);
         if (cursor != null) {
             for (cursor.moveToFirst(); !cursor.isAfterLast(); cursor.moveToNext()) {
                 int symptomId = cursor.getInt(cursor.getColumnIndex(Tables.Symptoms.COL_SYMPTOM_ID));
-                String _symptom = cursor.getString(cursor.getColumnIndex(Tables.Symptoms.COL_SYMPTOM));
-                int attackId = cursor.getInt(cursor.getColumnIndex(Tables.Symptoms.COL_ATTACK_ID));
-                symptomsInfoList.add(new SymptomsInfo(symptomId, _symptom, attackId));
+                String symptom = cursor.getString(cursor.getColumnIndex(Tables.Symptoms.COL_SYMPTOM));
+                //int attackId = cursor.getInt(cursor.getColumnIndex(Tables.Symptoms.COL_ATTACK_ID));
+                symptomsInfoList.add(new SymptomsInfo(symptomId, symptom, attackId));
             }
         }
 
@@ -86,10 +86,10 @@ public class TransactionsManager {
         return symptomsInfoList;
     }
 
-    public List<FirstAidInfo> getFirstAidInfoList(String firstAid) {
+    public List<FirstAidInfo> getFirstAidInfoList(int attackId) {
         String selection = null;
-        if (firstAid != null || !firstAid.equals("")) {
-            selection = Tables.FirstAids.COL_FIRST_AID + " LIKE '%" + firstAid + "%'";
+        if (attackId != -1) {
+            selection = Tables.FirstAids.COL_ATTACK_ID + "='" + attackId + "'";
         }
 
         Cursor cursor = getFirstAidCursor(null, selection, null, null, null, null);
@@ -98,9 +98,9 @@ public class TransactionsManager {
             for (cursor.moveToFirst(); !cursor.isAfterLast(); cursor.moveToNext()) {
 
                 int firstAidId = cursor.getInt(cursor.getColumnIndex(Tables.FirstAids.COL_FIRST_AID_ID));
-                String _firstAid = cursor.getString(cursor.getColumnIndex(Tables.FirstAids.COL_FIRST_AID));
-                int attackId = cursor.getInt(cursor.getColumnIndex(Tables.FirstAids.COL_ATTACK_ID));
-                firstAidInfoList.add(new FirstAidInfo(firstAidId, _firstAid, attackId));
+                String firstAid = cursor.getString(cursor.getColumnIndex(Tables.FirstAids.COL_FIRST_AID));
+                //int attackId = cursor.getInt(cursor.getColumnIndex(Tables.FirstAids.COL_ATTACK_ID));
+                firstAidInfoList.add(new FirstAidInfo(firstAidId, firstAid, attackId));
 
             }
         }
@@ -113,10 +113,10 @@ public class TransactionsManager {
         return firstAidInfoList;
     }
 
-    public List<NotesInfo> getNotesInfoList(String note) {
+    public List<NotesInfo> getNotesInfoList(int attackId) {
         String selection = null;
-        if (note != null || !note.equals("")) {
-            selection = Tables.Notes.COL_NOTE + " LIKE '%" + note + "%'";
+        if (attackId != -1) {
+            selection = Tables.Notes.COL_ATTACK_ID + "='" + attackId + "'";
         }
 
         Cursor cursor = getNotesCursor(null, selection, null, null, null, null);
@@ -125,9 +125,9 @@ public class TransactionsManager {
             for (cursor.moveToFirst(); !cursor.isAfterLast(); cursor.moveToNext()) {
 
                 int notesId = cursor.getInt(cursor.getColumnIndex(Tables.Notes.COL_NOTE_ID));
-                String _notes = cursor.getString(cursor.getColumnIndex(Tables.Notes.COL_NOTE));
-                int attackId = cursor.getInt(cursor.getColumnIndex(Tables.Notes.COL_ATTACK_ID));
-                notesInfoList.add(new NotesInfo(notesId, _notes, attackId));
+                String notes = cursor.getString(cursor.getColumnIndex(Tables.Notes.COL_NOTE));
+                //int attackId = cursor.getInt(cursor.getColumnIndex(Tables.Notes.COL_ATTACK_ID));
+                notesInfoList.add(new NotesInfo(notesId, notes, attackId));
 
             }
         }
@@ -193,5 +193,30 @@ public class TransactionsManager {
 
         }
         return attacksCustomLists;
+    }
+
+    public List<AttacksInfo> getAttack(int attackId) {
+        List<AttacksInfo>attacksInfos = new ArrayList<AttacksInfo>();
+        String selection = null;
+        if (attackId != -1 ) {
+            selection = Tables.Attacks.COL_ATTACK_ID + "='" + attackId + "'";
+        }
+        Cursor cursor = getAttacksCursor(null, selection, null, null, null, null);
+
+        if (cursor != null) {
+            for (cursor.moveToFirst(); !cursor.isAfterLast(); cursor.moveToNext()) {
+               // int attackId = cursor.getInt(cursor.getColumnIndex(Tables.Attacks.COL_ATTACK_ID));
+                String _attack = cursor.getString(cursor.getColumnIndex(Tables.Attacks.COL_ATTACK));
+                int degree = cursor.getInt(cursor.getColumnIndex(Tables.Attacks.COL_DEGREE));
+                attacksInfos.add(new AttacksInfo(attackId, _attack, degree));
+            }
+        }
+
+        if (cursor != null) {
+            if (!cursor.isClosed()) {
+                cursor.close();
+            }
+        }
+        return attacksInfos;
     }
 }
