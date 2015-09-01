@@ -143,10 +143,7 @@ public class TransactionsManager {
                 int notesId = cursor.getInt(cursor.getColumnIndex(Tables.Notes.COL_NOTE_ID));
                 String note = cursor.getString(cursor.getColumnIndex(Tables.Notes.COL_NOTE));
                 //int attackId = cursor.getInt(cursor.getColumnIndex(Tables.Notes.COL_ATTACK_ID));
-                String [] notes = note.split(",");
-                for(String _notes : notes){
-                    notesInfoList.add(new NotesInfo(notesId, _notes, attackId));
-                }
+                notesInfoList.add(new NotesInfo(notesId, note, attackId));
 
 
             }
