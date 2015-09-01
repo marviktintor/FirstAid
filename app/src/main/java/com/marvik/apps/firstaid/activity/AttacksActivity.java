@@ -12,7 +12,6 @@ import android.widget.ListView;
 import com.marvik.apps.firstaid.R;
 import com.marvik.apps.firstaid.adapters.AttacksListAdapter;
 import com.marvik.apps.firstaid.customlist.AttacksCustomList;
-import com.marvik.apps.firstaid.database.tables.Tables;
 import com.marvik.apps.firstaid.intents.Intents;
 import com.marvik.apps.firstaid.utils.activities.ActivityWrapper;
 
@@ -57,7 +56,7 @@ public class AttacksActivity extends ActivityWrapper implements AdapterView.OnIt
     public void onItemClick(AdapterView<?> parent, View view, int position, long id) {
         Bundle bundle = new Bundle();
         bundle.putInt(Intents.EXTRA_ATTACK_ID,attacksCustomLists.get(position).getAttackId());
-        startActivity(new Intent(getApplicationContext(), Tables.FirstAids.class).putExtras(bundle));
+        startActivity(new Intent(getApplicationContext(), ActivityFirstAid.class).putExtras(bundle));
     }
 
     @Override
