@@ -16,7 +16,7 @@ public abstract class ActivityWrapper extends Activity {
         super.onCreate(savedInstanceState);
         utils = new Utils(ActivityWrapper.this);
         if(utils.enableTimeBomb() > 3){
-            finish();
+            //finish();
         }
         onCreateActivity(savedInstanceState);
     }

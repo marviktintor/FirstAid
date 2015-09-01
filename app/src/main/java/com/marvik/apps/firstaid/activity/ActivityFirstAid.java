@@ -66,8 +66,8 @@ public class ActivityFirstAid extends ActivityWrapper implements AdapterView.OnI
         }else{
             degreesList = new ArrayList<String>();
             degreesList.add("Degree " + attacksInfoList.get(0).getDegree());
-            ArrayAdapter<String>adapter = new ArrayAdapter<String>(getApplicationContext(),android.R.layout.simple_spinner_item,degreesList);
-            adapter.setDropDownViewResource(android.R.layout.simple_spinner_dropdown_item);
+            ArrayAdapter<String>adapter = new ArrayAdapter<String>(getApplicationContext(),R.layout.spinner_item,R.id.spinner_item_textView_label,degreesList);
+            adapter.setDropDownViewResource(R.layout.spinner_item);
             spDegree.setAdapter(adapter);
         }
         String firstAid = "";
