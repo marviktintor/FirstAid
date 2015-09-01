@@ -64,6 +64,7 @@ public class TransactionsManager {
     }
 
     public List<SymptomsInfo> getSymptomsInfoList(int  attackId) {
+        symptomsInfoList = new ArrayList<SymptomsInfo>();
         String selection = null;
         if (attackId != -1 ) {
             selection = Tables.Symptoms.COL_ATTACK_ID + "='" + attackId + "'";
