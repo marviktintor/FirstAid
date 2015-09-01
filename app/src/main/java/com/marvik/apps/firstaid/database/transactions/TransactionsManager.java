@@ -91,6 +91,9 @@ public class TransactionsManager {
     }
 
     public List<FirstAidInfo> getFirstAidInfoList(int attackId) {
+
+        firstAidInfoList = new ArrayList<FirstAidInfo>();
+
         String selection = null;
         if (attackId != -1) {
             selection = Tables.FirstAids.COL_ATTACK_ID + "='" + attackId + "'";
