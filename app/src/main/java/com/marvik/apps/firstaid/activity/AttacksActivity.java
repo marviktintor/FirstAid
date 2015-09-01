@@ -6,6 +6,7 @@ import android.text.Editable;
 import android.text.TextWatcher;
 import android.view.View;
 import android.widget.AdapterView;
+import android.widget.Button;
 import android.widget.EditText;
 import android.widget.ListView;
 
@@ -22,6 +23,7 @@ import java.util.List;
  */
 public class AttacksActivity extends ActivityWrapper implements AdapterView.OnItemClickListener, TextWatcher {
 
+    private Button btEmergency;
     private EditText etSearch;
     private ListView lvAttacks;
 
@@ -83,10 +85,10 @@ public class AttacksActivity extends ActivityWrapper implements AdapterView.OnIt
 
 
     private void initViews() {
-        etSearch = (EditText) findViewById(R.id.activity_firstaid_editText_search);
+        etSearch = (EditText) findViewById(R.id.activity_attacks_editText_search);
         etSearch.addTextChangedListener(this);
 
-        lvAttacks = (ListView) findViewById(R.id.activity_firstaid_listView_attacks);
+        lvAttacks = (ListView) findViewById(R.id.activity_attacks_listView_attacks);
         lvAttacks.setOnItemClickListener(this);
     }
 
