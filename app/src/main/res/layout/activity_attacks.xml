@@ -24,7 +24,7 @@
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:drawableLeft="@android:drawable/ic_menu_search"
-        android:text="@string/search" />
+        android:hint="@string/search" />
 
     <ListView
         android:id="@+id/activity_firstaid_listView_attacks"
