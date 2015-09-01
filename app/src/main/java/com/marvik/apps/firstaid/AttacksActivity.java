@@ -9,6 +9,10 @@ import android.widget.AdapterView;
 import android.widget.EditText;
 import android.widget.ListView;
 
+import com.marvik.apps.firstaid.infos.AttacksInfo;
+
+import java.util.List;
+
 /**
  * Created by victor on 9/1/2015.
  */
@@ -17,6 +21,8 @@ public class AttacksActivity extends Activity implements AdapterView.OnItemClick
     private EditText etSearch;
     private ListView lvAttacks;
 
+    private List<AttacksInfo> attacksInfo;
+
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -24,6 +30,7 @@ public class AttacksActivity extends Activity implements AdapterView.OnItemClick
 
         initViews();
     }
+
     @Override
     public void onItemClick(AdapterView<?> parent, View view, int position, long id) {
 
@@ -41,8 +48,9 @@ public class AttacksActivity extends Activity implements AdapterView.OnItemClick
 
     @Override
     public void afterTextChanged(Editable s) {
-
+        populateListView();
     }
+
     @Override
     protected void onResume() {
         super.onResume();
@@ -50,10 +58,10 @@ public class AttacksActivity extends Activity implements AdapterView.OnItemClick
     }
 
     private void initViews() {
-        etSearch = (EditText)findViewById(R.id.activity_firstaid_editText_search);
+        etSearch = (EditText) findViewById(R.id.activity_firstaid_editText_search);
         etSearch.addTextChangedListener(this);
 
-        lvAttacks = (ListView)findViewById(R.id.activity_firstaid_listView_attacks);
+        lvAttacks = (ListView) findViewById(R.id.activity_firstaid_listView_attacks);
         lvAttacks.setOnItemClickListener(this);
     }
 
