@@ -101,14 +101,14 @@
             android:layout_height="1dp"
             android:background="@android:color/darker_gray" />
 
-        <TextView
+        <TextView android:background="@android:color/holo_orange_dark"
             android:id="@+id/activity_first_aid_textView_note"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:padding="16dp"
             android:text="@string/note"
             android:textAppearance="?android:attr/textAppearanceMedium"
-            android:textColor="@android:color/holo_blue_bright" />
+            android:textColor="@android:color/white" />
 
 
     </LinearLayout>
