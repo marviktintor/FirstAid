@@ -6,11 +6,13 @@
         android:icon="@mipmap/ic_launcher"
         android:label="@string/app_name"
         android:theme="@style/AppTheme">
+        <activity android:name=".activity.ActivityEmergencySupport">
 
+        </activity>
         <activity android:name=".activity.ActivityFirstAid">
 
         </activity>
-        <activity android:name=".activity.AttacksActivity">
+        <activity android:name=".activity.AttacksActivity" android:windowSoftInputMode="stateHidden">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
                 <category android:name="android.intent.category.LAUNCHER" />

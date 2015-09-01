@@ -21,7 +21,7 @@ import java.util.List;
 /**
  * Created by victor on 9/1/2015.
  */
-public class AttacksActivity extends ActivityWrapper implements AdapterView.OnItemClickListener, TextWatcher {
+public class AttacksActivity extends ActivityWrapper implements AdapterView.OnItemClickListener, TextWatcher, View.OnClickListener {
 
     private Button btEmergency;
     private EditText etSearch;
@@ -90,6 +90,9 @@ public class AttacksActivity extends ActivityWrapper implements AdapterView.OnIt
 
         lvAttacks = (ListView) findViewById(R.id.activity_attacks_listView_attacks);
         lvAttacks.setOnItemClickListener(this);
+
+        btEmergency = (Button)findViewById(R.id.activity_attacks_button_emergency);
+        btEmergency.setOnClickListener(this);
     }
 
     private void populateListView() {
@@ -98,4 +101,8 @@ public class AttacksActivity extends ActivityWrapper implements AdapterView.OnIt
     }
 
 
+    @Override
+    public void onClick(View v) {
+        startActivity(new Intent(getApplicationContext(),ActivityEmergencySupport.class));
+    }
 }
