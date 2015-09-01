@@ -42,6 +42,9 @@ public class ActivityFirstAid extends ActivityWrapper implements AdapterView.OnI
     protected void onCreateActivity(Bundle savedInstanceState) {
         setContentView(R.layout.activity_first_aid);
         initViews();
+
+        savedInstanceState = getIntent().getExtras();
+
         if (savedInstanceState != null) {
             if (savedInstanceState.getInt(Intents.EXTRA_ATTACK_ID) != -1) {
                 attackId = savedInstanceState.getInt(Intents.EXTRA_ATTACK_ID);
