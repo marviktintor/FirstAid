@@ -77,8 +77,9 @@ public class ActivityFirstAid extends ActivityWrapper implements AdapterView.OnI
 
         String symptoms = "";
         for (int i = 0; i < symptomsInfoList.size(); i++) {
-            symptoms += (i + 1) + " " + symptomsInfoList.get(i).getSymptom() + "\r\n";
-
+            if(!symptomsInfoList.get(i).getSymptom().equals("")) {
+                symptoms += (i + 1) + " " + symptomsInfoList.get(i).getSymptom() + "\r\n";
+            }
         }
 
         String note = notesInfoList.get(0).getNote();
