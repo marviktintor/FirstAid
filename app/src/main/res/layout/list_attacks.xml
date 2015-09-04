@@ -19,6 +19,6 @@
         android:layout_height="wrap_content"
         android:text="@string/symptoms" android:maxLength="100"
         android:textAppearance="?android:attr/textAppearanceMedium"
-        android:textColor="#ffff00" />
+        android:textColor="#ff9629" />
 
 </LinearLayout>

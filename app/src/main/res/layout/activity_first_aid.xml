@@ -59,7 +59,7 @@
                 android:padding="16dp"
                 android:text="@string/symptoms"
                 android:textAppearance="?android:attr/textAppearanceMedium"
-                android:textColor="#ffff00" />
+                android:textColor="#ff9629" />
 
 
             <TextView
