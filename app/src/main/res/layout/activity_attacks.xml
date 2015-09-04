@@ -58,9 +58,9 @@
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:layout_alignParentBottom="true"
-        android:background="@android:color/holo_orange_dark"
+        android:background="#ffff00"
         android:gravity="center"
         android:padding="16dp"
         android:text="@string/emergency_and_support"
-        android:textColor="@android:color/white" />
+        android:textColor="#26a760" />
 </RelativeLayout>

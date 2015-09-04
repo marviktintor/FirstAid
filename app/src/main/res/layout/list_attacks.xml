@@ -11,7 +11,7 @@
         android:layout_height="wrap_content"
         android:text="@string/attack"
         android:textAppearance="?android:attr/textAppearanceLarge"
-        android:textColor="@android:color/darker_gray" />
+        android:textColor="@android:color/holo_red_dark" />
 
     <TextView
         android:id="@+id/list_attacks_textView_symptoms"
@@ -19,6 +19,6 @@
         android:layout_height="wrap_content"
         android:text="@string/symptoms" android:maxLength="100"
         android:textAppearance="?android:attr/textAppearanceMedium"
-        android:textColor="#FF6600" />
+        android:textColor="#ffff00" />
 
 </LinearLayout>

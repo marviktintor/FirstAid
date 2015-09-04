@@ -59,14 +59,14 @@
                 android:padding="16dp"
                 android:text="@string/symptoms"
                 android:textAppearance="?android:attr/textAppearanceMedium"
-                android:textColor="#FF6600" />
+                android:textColor="#ffff00" />
 
 
             <TextView
                 android:id="@+id/activity_first_aid_textView_label_first_aid"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:background="@android:color/holo_green_dark"
+                android:background="#26a760"
                 android:padding="10dp"
                 android:text="@string/firstaid"
                 android:textAppearance="?android:attr/textAppearanceMedium"
@@ -84,7 +84,7 @@
                 android:padding="16dp"
                 android:text="@string/firstaid"
                 android:textAppearance="?android:attr/textAppearanceMedium"
-                android:textColor="@android:color/holo_green_dark" />
+                android:textColor="#26a760" />
 
             <LinearLayout
                 android:layout_width="match_parent"
