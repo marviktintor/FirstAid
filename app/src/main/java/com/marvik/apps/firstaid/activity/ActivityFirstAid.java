@@ -86,7 +86,7 @@ public class ActivityFirstAid extends ActivityWrapper implements AdapterView.OnI
 
 
         tvAttack.setText(attack);
-        tvSymptoms.setText(symptoms);
+        tvSymptoms.setText(symptoms.equals("")?"The Person is Unconscious":symptoms);
         tvNotes.setText(note);
         tvFirstAid.setText(firstAid);
     }

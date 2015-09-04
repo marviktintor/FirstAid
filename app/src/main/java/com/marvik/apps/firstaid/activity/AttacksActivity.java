@@ -93,6 +93,8 @@ public class AttacksActivity extends ActivityWrapper implements AdapterView.OnIt
 
         btEmergency = (Button)findViewById(R.id.activity_attacks_button_emergency);
         btEmergency.setOnClickListener(this);
+
+
     }
 
     private void populateListView() {

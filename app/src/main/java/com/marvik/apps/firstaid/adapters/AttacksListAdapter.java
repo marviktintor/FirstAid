@@ -69,7 +69,8 @@ public class AttacksListAdapter extends BaseAdapter {
         }
 
         public void setSymptoms(int position) {
-            tvSymptoms.setText(getAttacksCustomLists().get(position).getSymptom());
+            String symptoms = getAttacksCustomLists().get(position).getSymptom();
+            tvSymptoms.setText(symptoms.equals("")?"The Person is Unconscious":symptoms);
         }
     }
 
