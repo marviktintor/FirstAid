@@ -88,7 +88,7 @@ public class Data {
             "",//Heart Attack/Arrest
             "NOTE: AVOID Immersing the person in warm water,Giving caffeine and alcohol",//Hypothermia
             "",//Hiccups
-            " DO NOT Cut the affected area\nDO NOT Apply cold compresses or tourniquet\nDO NOT Try to suck the venom by mouth\n DO NOT Give the victim anything by mouth\n DO NOT Give the victim any medication unless directed by  doctor\n\nNOTE: Bandaging the wound firmly helps to prevent the venom from leaving the bitten part",//Snake Bites
+            " DO NOT Cut the affected area\nDO NOT Apply cold compresses or tourniquet\nDO NOT Try to suck the venom by mouth\nDO NOT Give the victim anything by mouth\nDO NOT Give the victim any medication unless directed by  doctor\n\nNOTE: Bandaging the wound firmly helps to prevent the venom from leaving the bitten part",//Snake Bites
             "",//Stings
             "",//Attention
             "Call emergency medical unit,Give first aid for cuts and wounds if any,If unconscious begin CPR ,Lay the victim in a recovery position,Monitor until help arrives",//Stroke

@@ -1,6 +1,10 @@
 package com.marvik.apps.firstaid.activity;
 
+import android.content.Intent;
+import android.net.Uri;
 import android.os.Bundle;
+import android.view.View;
+import android.widget.AdapterView;
 import android.widget.ArrayAdapter;
 import android.widget.ListView;
 
@@ -12,7 +16,7 @@ import java.util.ArrayList;
 /**
  * Created by victor on 9/2/2015.
  */
-public class ActivityEmergencySupport extends ActivityWrapper {
+public class ActivityEmergencySupport extends ActivityWrapper implements AdapterView.OnItemClickListener {
     private ListView lvEmergencyAndSupport;
 
     @Override
@@ -23,6 +27,8 @@ public class ActivityEmergencySupport extends ActivityWrapper {
 
     private void initChildViews() {
         lvEmergencyAndSupport = (ListView) findViewById(R.id.activity_emergency_and_support_listView_emergency_and_support);
+        lvEmergencyAndSupport.setOnItemClickListener(this);
+
         ArrayList<String> emergencyAndSupport = new ArrayList<String>();
 
 
@@ -50,5 +56,10 @@ public class ActivityEmergencySupport extends ActivityWrapper {
     @Override
     protected void onDestroyActivity() {
 
+    }
+
+    @Override
+    public void onItemClick(AdapterView<?> parent, View view, int position, long id) {
+        startActivity(new Intent(Intent.ACTION_DIAL, Uri.parse("tel:0202344599")));
     }
 }
