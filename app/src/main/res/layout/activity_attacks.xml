@@ -60,7 +60,7 @@
         android:layout_alignParentBottom="true"
         android:background="#ffff00"
         android:gravity="center"
-        android:padding="16dp"
+        android:padding="16dp" android:textStyle="bold"
         android:text="@string/emergency_and_support"
         android:textColor="#26a760" />
 </RelativeLayout>
