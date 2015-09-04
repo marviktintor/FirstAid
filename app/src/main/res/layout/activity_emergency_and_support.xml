@@ -4,13 +4,27 @@
     android:layout_height="match_parent"
     android:orientation="vertical">
 
-    <TextView
+    <LinearLayout
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:background="@android:color/holo_orange_dark"
-        android:padding="16dp"
-        android:text="@string/emergency_and_support"
-        android:textColor="@android:color/white" />
+        android:background="#26a760"
+        android:orientation="horizontal">
+
+        <ImageView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:src="@mipmap/nairobi_county_logo" />
+
+        <TextView android:textStyle="bold"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:background="#26a760"
+            android:padding="16dp"
+            android:text="@string/emergency_and_support"
+            android:textColor="#ffff00" />
+    </LinearLayout>
+
+
 
     <ListView
         android:id="@+id/activity_emergency_and_support_listView_emergency_and_support"
