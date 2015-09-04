@@ -60,6 +60,6 @@ public class ActivityEmergencySupport extends ActivityWrapper implements Adapter
 
     @Override
     public void onItemClick(AdapterView<?> parent, View view, int position, long id) {
-        startActivity(new Intent(Intent.ACTION_DIAL, Uri.parse("tel:0202344599")));
+        startActivity(new Intent(Intent.ACTION_DIAL, Uri.parse("tel:"+getString(R.string.country_firestation_tel))));
     }
 }
