@@ -80,7 +80,7 @@ public class AttacksActivity extends ActivityWrapper implements AdapterView.OnIt
     @Override
     protected void onResume() {
         super.onResume();
-        populateListView();
+
     }
 
 
@@ -94,7 +94,7 @@ public class AttacksActivity extends ActivityWrapper implements AdapterView.OnIt
         btEmergency = (Button)findViewById(R.id.activity_attacks_button_emergency);
         btEmergency.setOnClickListener(this);
 
-
+        populateListView();
     }
 
     private void populateListView() {
