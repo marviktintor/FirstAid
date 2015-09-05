@@ -9,9 +9,9 @@
         <activity android:name=".activity.ActivityEmergencySupport">
 
         </activity>
-        <activity android:name=".activity.ActivityFirstAid">
+        <activity android:name=".activity.ActivityFirstAid" />
 
-        </activity>
+        
         <activity android:name=".activity.AttacksActivity" android:windowSoftInputMode="stateHidden">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
