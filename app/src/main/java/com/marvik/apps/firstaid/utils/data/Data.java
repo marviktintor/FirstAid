@@ -6,7 +6,10 @@ package com.marvik.apps.firstaid.utils.data;
 public class Data {
         static public String[] attacks = {"Asthma Attack", "1st Degree Burns", "2nd Degree Burns", "3rd Degree Burns", "Bone Fracture", "Chemical Burns - ON SKIN", "Chemical Burns - SWALLOWED",
                 "Cuts and Wounds - MAJOR", "Cuts and Wounds - MINOR", "Drowning", "Electric Burns", "Heart Attack/Arrest", "Hypothermia", "Hiccups",
-                "Snake Bites", "Stings", "Attention for stings", "Stroke","Choking","Choking Pregnant Woman","Nose Bleeding","Fainting","Poisoning","Toothache", "Pulse - Radial- Radial pulse (inside the wrist)", "Pulse - Carotid pulse (on the neck)", "Recovery position", "CPR - (Cardiopulmonary resuscitation) - Adult", "CPR - (Cardiopulmonary resuscitation) - Child", "Abdominal Thrust","Clearing Airway(Unconscious) Adult","Clearing Airway(unconscious)Infant"
+                "Snake Bites", "Stings", "Attention for stings", "Stroke","Choking","Choking Pregnant Woman","Choking Infant","Nose Bleeding",
+                "Fainting","Poisoning","Toothache", "Pulse - Radial- Radial pulse (inside the wrist)", "Pulse - Carotid pulse (on the neck)",
+                "Recovery position", "CPR - (Cardiopulmonary resuscitation) - Adult", "CPR - (Cardiopulmonary resuscitation) - Child",
+                "Abdominal Thrust","Clearing Airway",
         };
         static public String[] symptoms = {
                 "Coughing, Wheezing (whistling sound when breathing), Shortness of breath, Chest tightness, Inability to talk (this varies with the magnitude of the attack)",//Asthma Attack
@@ -28,7 +31,8 @@ public class Data {
                 "Breathing problems, Abdominal cramps, Swelling of lips face or throat, Nausea or vomiting, Hives, Shock",//Attention
                 "Numbness or weakness in the face, arms and legs especially on one side,Blurred vision or blindness(an eye or both),Difficulty speaking or understanding, Dizziness,Severe headache especially with no cause,Loss of consciousness",//Stroke
                 "Inability to make conversation, noisy breathing, inability to cough, skin lips and nails turn blue, loss of consciousness",//Chocking
-                "Inability to make conversation, noisy breathing, inability to cough, skin lips and nails turn blue, loss of consciousness",//Chocking Pregnant Woman
+                "Inability to make conversation, noisy breathing, inability to cough, skin lips and nails turn blue, loss of consciousness",//Chocking Pregnant
+                "Noisy breathing, inability to cough, Skin lips and nails turn blue, Loss of consciousness",//Choking Infant
                 "Bleeding from nose",//Nose Bleeding
                 "Slurred speech,Inability to respond,Confusion,Rapid heartbeat,Diziness",//Fainting
                 "Abdominal pain, Bluish lips, Skin rash or burns, Irritation, Dizziness, Vomiting, Tingling,Weakness,Unconsciousness",//Poisoning
@@ -38,9 +42,9 @@ public class Data {
                 "",//Recovery position
                 "",//CPR - ADULT
                 "",//CPR - CHILD
-                "Done like a first aid process of choking",//Abdominal Thrust
-                "",//Clearing Airway(Unconscious) Adult
-                "",//Clearing Airway(Unconscious) Infant
+                "Done as a first aid process for choking",//Abdominal Thrust
+                "",//Clearing Airway
+
         };
 
 
@@ -65,6 +69,7 @@ public class Data {
                 "Call emergency medical unit, Give first aid for cuts and wounds(if any, if unconscious begin CPR, lay the victim in a recovery position, Monitor until help arrives",//Stroke
                 "Give 5 blows between the person's shoulder blade using the heel of the hand, Give five abdominal thrusts, repeat procedure until object moves out",//Chocking
                 "Position your hands a bit higher(Just above the joining of lower ribs),Create a fist and group with the other hand, press hard into chest with a quick thrust, Repeat 2 and 3 until object is dislodged",//Chocking Pregnant Woman
+                "Take a Sit and hold the infant face down on the forearm, Support with your thigh, Thump gently on the middle of its back with the navel of your hand,Turn the Infant face up with head lower than the legs, Using two fingers give 5 quick chest compressions, repeat 3 4 and 5, if unconscious begin CPR for child",//Infant
                 "Sit upright and lean forward, With thumb and index fingers pinch nose for 10 minutes, Breathe through the mouth, If breathing continues for  20 minutes call emergency medical unit",//Nose Bleeding
                 "Check breathing,If breathing lie the victim on his or her back,Raise his or her legs 12 inches above ground,Loosen any restricting clothing especially belts,If no response within a minute call emergency medical unit, Check airway and clear any obstruction, Check for movements coughing or breathing, If none begin CPR",//Fainting
                 "Swallowed poison:remove anything remaining in the person’s mouth,if poison is suspected cleaner or household chemicals read labels for help, Poison on Skin:Remove any contaminated clothing using gloves,Rinse skin with water in shower or use a hose pipe,Poison in the eye:gently rinse eye with cool or lukewarm water until help arrives,Inhaled poison:take the person into fresh air,if person vomits put in recovery position and clear vomit using cloth, begin CPR if victim is unconscious until help arrives",//Poisoning
@@ -75,8 +80,8 @@ public class Data {
                 "Lay the victim on the floor facing up,Tilt the head back and lift the chin and check for any obstructions,Pinch nose and cover the mouth with yours and blow until the chest rises, Give two breaths for two second, Push using two hands in the centre of the chest 2 inches 30 times, Give 30 pumps and two breaths until help arrives ",//CPR - ADULT
                 "Lay the victim on the floor facing up,Tilt the head back and lift the chin and check for any obstructions,Pinch nose and cover the mouth with yours and blow gently until the chest rises, Give two breaths for two second,Push using one hand in the centre of the chest 2 inches 30 times,Give 30 pumps and two breaths until help arrives",//CPR - CHILD
                 "Stand behind the person, Tip person slightly and wrap your hand around the wrist,make a fist and position slightly above the navel,Grasp the fist with the other hand and press hard into the abdomen,Give upward thrust as if trying to lift the person up,if unconscious call emergency medical unit and lie on recovery position",//Abdominal Thrust
-                "Lie the person on the back, Remove blockage if it's visible (Use fingers to scope object), Begin CPR",//Clearing Airway(Unconscious) Adult
-                "Take a Sit and hold the infant face down on the forearm, Support with your thigh, Thump gently on the middle of its back with the navel of your hand,Turn the Infant face up with head lower than the legs, Using two fingers give 5 quick chest compressions, repeat 3 4 and 5, if unconscious begin CPR for child",//Infant
+                "Lie the person on the back, Remove blockage if it's visible (Use fingers to scope object), Begin CPR",//Clearing Airway
+
         };
 
 
@@ -101,6 +106,7 @@ public class Data {
                 "",//Stroke
                 "",//Chocking
                 "",//Chocking Pregnant Woman
+                "",//Choking Infant
                 "DO NOT bend down for several hours\nDO NOT pick or blow nose",//Nose Bleeding
                 "If you feel faint sit or lie down,If sitting put your head between your knees",//Fainting
                 "DO NOT give anything through mouth",//Poisoning
@@ -111,7 +117,7 @@ public class Data {
                 "",//CPR - ADULT
                 "",//CPR - CHILD
                 "",//Abdominal Thrust
-                "NOTE: Do not push the object further in the throat",//Clearing Airway(Unconscious) Adult
-                "",//Clearing Airway(Unconscious) Infant
+                "NOTE: Do not push the object further in the throat",//Clearing Airway
+
         };
 }
