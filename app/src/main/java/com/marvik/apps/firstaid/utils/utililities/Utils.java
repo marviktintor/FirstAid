@@ -6,7 +6,8 @@ import android.content.Context;
 import android.content.SharedPreferences;
 import android.graphics.BitmapFactory;
 import android.preference.PreferenceManager;
-import android.support.v7.app.NotificationCompat;
+
+import androidx.core.app.NotificationCompat;
 
 import com.marvik.apps.firstaid.R;
 import com.marvik.apps.firstaid.database.tables.Tables;
